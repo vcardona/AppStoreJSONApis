@@ -12,9 +12,12 @@ class BaseTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Al prinicipio se utiliza un UIViewController como argumento para ir creando la app, pero
+        // a medida que se va creando cada una de las clases que se van a usar se va cambiando el argumento que se entrega a createNavController
+        
         viewControllers = [
         createNavController(viewController: UIViewController(), title: "Today", imageName: "today_icon"),
-        createNavController(viewController: UIViewController(), title: "Apps", imageName: "apps"),
+        createNavController(viewController: AppsController(), title: "Apps", imageName: "apps"),
         createNavController(viewController: AppsSearchController(), title: "Search", imageName: "search")]
     }
     
