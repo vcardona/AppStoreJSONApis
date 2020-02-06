@@ -15,6 +15,7 @@
 		FE645C7E23E85797001D3648 /* AppRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE645C7D23E85797001D3648 /* AppRowCell.swift */; };
 		FE645C8023E859D7001D3648 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE645C7F23E859D7001D3648 /* Extensions.swift */; };
 		FE645C8223E87C40001D3648 /* AppsPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE645C8123E87C40001D3648 /* AppsPageHeader.swift */; };
+		FE82850F23EC5CAB00BAF03C /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE82850E23EC5CAB00BAF03C /* AppGroup.swift */; };
 		FE988FAB23E8B2B400872A43 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE988FAA23E8B2B400872A43 /* AppsHeaderCell.swift */; };
 		FEACD0D723D4A8D00092FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACD0D623D4A8D00092FF96 /* AppDelegate.swift */; };
 		FEACD0D923D4A8D00092FF96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACD0D823D4A8D00092FF96 /* SceneDelegate.swift */; };
@@ -43,6 +44,7 @@
 		FE645C7D23E85797001D3648 /* AppRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowCell.swift; sourceTree = "<group>"; };
 		FE645C7F23E859D7001D3648 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FE645C8123E87C40001D3648 /* AppsPageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageHeader.swift; sourceTree = "<group>"; };
+		FE82850E23EC5CAB00BAF03C /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		FE988FAA23E8B2B400872A43 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 		FEACD0D323D4A8CF0092FF96 /* AppStoreJSONApis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreJSONApis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEACD0D623D4A8D00092FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				FEACD0F823D5F9460092FF96 /* SearchResult.swift */,
+				FE82850E23EC5CAB00BAF03C /* AppGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				FEACD0F423D552BF0092FF96 /* UIView+Layout.swift in Sources */,
 				FE645C8023E859D7001D3648 /* Extensions.swift in Sources */,
 				FE2398E323E25A690050C321 /* BaseListController.swift in Sources */,
+				FE82850F23EC5CAB00BAF03C /* AppGroup.swift in Sources */,
 				FE988FAB23E8B2B400872A43 /* AppsHeaderCell.swift in Sources */,
 				FEACD0D923D4A8D00092FF96 /* SceneDelegate.swift in Sources */,
 				FEB6C9E323E27B47005A4928 /* AppsHorizontalController.swift in Sources */,
