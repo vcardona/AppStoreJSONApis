@@ -19,6 +19,7 @@
 		FE94A4D724023300004665AE /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94A4D624023300004665AE /* SocialApp.swift */; };
 		FE94A4D92402CECE004665AE /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94A4D82402CECE004665AE /* HorizontalSnappingController.swift */; };
 		FE94A4DB2402DBAB004665AE /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94A4DA2402DBAB004665AE /* BetterSnappingLayout.swift */; };
+		FE94A4DE24031DB7004665AE /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94A4DD24031DB7004665AE /* AppDetailController.swift */; };
 		FE988FAB23E8B2B400872A43 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE988FAA23E8B2B400872A43 /* AppsHeaderCell.swift */; };
 		FEACD0D723D4A8D00092FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACD0D623D4A8D00092FF96 /* AppDelegate.swift */; };
 		FEACD0D923D4A8D00092FF96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACD0D823D4A8D00092FF96 /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 		FE94A4D624023300004665AE /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		FE94A4D82402CECE004665AE /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
 		FE94A4DA2402DBAB004665AE /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
+		FE94A4DD24031DB7004665AE /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
 		FE988FAA23E8B2B400872A43 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 		FEACD0D323D4A8CF0092FF96 /* AppStoreJSONApis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreJSONApis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEACD0D623D4A8D00092FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		FE2398DF23E256540050C321 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				FE94A4DC24031D8B004665AE /* Details */,
 				FEB6C9E223E27B47005A4928 /* AppsHorizontalController.swift */,
 				FE60C07A23E87F3D00BE3145 /* AppsPageController.swift */,
 			);
@@ -126,6 +129,14 @@
 				FE988FAA23E8B2B400872A43 /* AppsHeaderCell.swift */,
 			);
 			path = Apps;
+			sourceTree = "<group>";
+		};
+		FE94A4DC24031D8B004665AE /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				FE94A4DD24031DB7004665AE /* AppDetailController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		FEACD0CA23D4A8CF0092FF96 = {
@@ -342,6 +353,7 @@
 				FE94A4D92402CECE004665AE /* HorizontalSnappingController.swift in Sources */,
 				FE94A4DB2402DBAB004665AE /* BetterSnappingLayout.swift in Sources */,
 				FEACD0F623D559930092FF96 /* VerticalStackView.swift in Sources */,
+				FE94A4DE24031DB7004665AE /* AppDetailController.swift in Sources */,
 				FEACD0FC23D60BFA0092FF96 /* Service.swift in Sources */,
 				FE60C07D23E8893F00BE3145 /* AppsHeaderHorizontalController.swift in Sources */,
 				FE645C8223E87C40001D3648 /* AppsPageHeader.swift in Sources */,
