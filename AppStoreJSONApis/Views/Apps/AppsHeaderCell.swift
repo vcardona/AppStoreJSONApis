@@ -17,7 +17,6 @@ class AppsHeaderCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame:frame)
         
-        imageView.backgroundColor = .red
         titleLabel.numberOfLines = 2
         
         let stackView = VerticalStackView(arrangedSubViews: [companyLabel,titleLabel,imageView], spacing: 12)

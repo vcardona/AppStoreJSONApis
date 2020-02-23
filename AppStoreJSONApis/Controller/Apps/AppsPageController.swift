@@ -15,6 +15,14 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     let cellId = "id"
     let headerId = "headerId"
     
+    let activityIndiicatorView: UIActivityIndicatorView = {
+        let aiv = UIActivityIndicatorView(style: .whiteLarge)
+        aiv.color = .black
+        aiv.startAnimating()
+        aiv.hidesWhenStopped = true
+        return aiv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
@@ -24,11 +32,15 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         // 1
         collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
         
+        view.addSubview(activityIndiicatorView)
+        activityIndiicatorView.fillSuperview()
+        
         fetchData()
     }
     
 //    var editorsChoiceGames : AppGroup?
     
+    var socialApps = [SocialApp]()
     var groups = [AppGroup]()
     
     fileprivate func fetchData()
@@ -60,8 +72,17 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
                 group3 = appGroup
             }
         
+        dispatchGroup.enter()
+        Service.shared.fetchSolcialApps{(apps, err) in
+            
+            dispatchGroup.leave()
+            self.socialApps = apps ?? []
+        }
+        
         dispatchGroup.notify(queue: .main){
             print("completed your dispatch group tasks...")
+            
+            self.activityIndiicatorView.stopAnimating()
             
             if let group = group1{
                 self.groups.append(group)
@@ -78,7 +99,9 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     
     // 2
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! AppsPageHeader
+        header.appHeaderHorizontalController.socialApps = self.socialApps
+        header.appHeaderHorizontalController.collectionView.reloadData()
         return header
     }
     
