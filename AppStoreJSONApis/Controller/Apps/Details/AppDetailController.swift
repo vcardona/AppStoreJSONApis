@@ -17,10 +17,16 @@ class AppDetailController: BaseListController, UICollectionViewDelegateFlowLayou
             Service.shared.fetchGenericJSONData(urlString: urlString)
             {
                 (result: SearchResult?, err) in
-                print(result?.results.first?.releaseNotes)
+                let app = result?.results.first
+                self.app = app
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             }
         }
     }
+    
+    var app: Result?
     
     let detailCellId = "detailCellId"
     
@@ -38,6 +44,12 @@ class AppDetailController: BaseListController, UICollectionViewDelegateFlowLayou
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailCellId, for: indexPath) as! AppDetailCell
+        
+        cell.nameLabel.text = app?.trackName
+        cell.releaseNotesLabel.text = app?.releaseNotes
+        cell.appIconImageView.sd_setImage(with: URL(string: app?.artworkUrl100 ?? ""))
+        cell.priceButton.setTitle(app?.formattedPrice, for: .normal)
+        
         return cell
     }
     
