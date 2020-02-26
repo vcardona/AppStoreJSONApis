@@ -25,7 +25,15 @@ class ReviewCell: UICollectionViewCell {
         layer.cornerRadius = 16
         clipsToBounds = true
         
-        let stackView = VerticalStackView(arrangedSubViews: [UIStackView(arrangedSubviews: [titleLabel, UIView(), authorLabel]),starsLabel,bodyLabel], spacing: 12)
+        let stackView = VerticalStackView(arrangedSubViews: [
+            UIStackView(arrangedSubviews: [
+                titleLabel,
+                authorLabel],customSpacing: 8),
+                starsLabel,
+                bodyLabel], spacing: 12)
+        
+        titleLabel.setContentCompressionResistancePriority(.init(0), for: .horizontal)
+        authorLabel.textAlignment = .right
         
         addSubview(stackView)
         stackView.fillSuperview(padding: .init(top: 20, left: 20, bottom: 20, right: 20))
